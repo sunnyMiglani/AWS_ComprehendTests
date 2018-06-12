@@ -12,6 +12,7 @@ stringResponse = json.dumps(comprehend.detect_entities(Text=text, LanguageCode='
 dictResponse = json.loads(stringResponse);
 listOfEntities = [];
 listOfDefines = [];
+# print(stringResponse);
 for entity in dictResponse['Entities']:
     listOfEntities.append(entity['Text']);
     listOfDefines.append(entity['Type']);
